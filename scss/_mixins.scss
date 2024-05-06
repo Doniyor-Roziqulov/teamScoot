@@ -1,0 +1,24 @@
+@mixin list-unstyled($mb: 0) {
+  margin-top: 0;
+  margin-bottom: $mb;
+  padding-left: 0;
+  list-style: none;
+}
+
+@mixin flex-box {
+  display: flex;
+  align-items: center;
+}
+
+@mixin before-after($display: block, $width, $height, $content: "") {
+  display: $display;
+  width: $width;
+  height: $height;
+  content: $content;
+}
+
+@mixin responsive($width) {
+  @media only screen and (min-width: $width) {
+    @content;
+  }
+}

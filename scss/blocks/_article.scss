@@ -1,0 +1,118 @@
+@use "../mixins" as *;
+@use "../variables" as *;
+
+.sign {
+  padding: 88px 0;
+  background-image: url("../../images/articlebg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right bottom;
+}
+.sign__title-wrapper {
+  margin-bottom: 40px;
+}
+.sign__title {
+  margin: 0;
+  color: #fff;
+  text-align: center;
+  font-family: "Space Mono";
+  font-size: 26px;
+  line-height: 32px;
+  letter-spacing: -1.429px;
+}
+.sign__links-wrapper {
+  justify-content: center;
+  display: flex;
+  column-gap: 13px;
+}
+.sign__small {
+  display: block;
+  color: #495567;
+  font-family: "Space Mono";
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: -0.446px;
+}
+.sign__bold {
+  color: #495567;
+  font-family: "Space Mono";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.893px;
+}
+.sign__links {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  column-gap: 9px;
+  padding: 8px 12px 6px 11px;
+  background-color: #e5ecf4;
+  border-radius: 7px;
+  &:first-child::before {
+    content: "";
+    width: 17px;
+    height: 20px;
+    background-image: url("../../images/apple.svg");
+    background-size: 17px 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  &:last-child::before {
+    content: "";
+    width: 17px;
+    height: 19px;
+    background-image: url("../../images/googleplay.svg");
+    background-size: 17px 19px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+@include responsive(369px) {
+  .sign__title {
+    font-size: 28px;
+  }
+}
+@include responsive(394px) {
+  .sign__title {
+    font-size: 30px;
+  }
+}
+@include responsive(420px) {
+  .sign__title {
+    font-size: 32px;
+  }
+}
+@include responsive(500px) {
+  .sign__title-wrapper {
+    max-width: 457px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .sign__title {
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: -2.143px;
+  }
+}
+@include responsive(1024px) {
+  .sign__wrapper {
+    @include flex-box;
+    justify-content: space-between;
+  }
+  .sign__title-wrapper {
+    margin-left: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+  }
+  .sign__title {
+    text-align: start;
+  }
+  .sign__links-wrapper {
+    column-gap: 18px;
+  }
+  .sign__links {
+    padding: 8px 15px 9px 16px;
+  }
+}

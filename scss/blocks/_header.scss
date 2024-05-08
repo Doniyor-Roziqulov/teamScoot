@@ -1,0 +1,125 @@
+@use "../mixins" as *;
+@use "../variables" as *;
+
+.site-header {
+  position: relative;
+  padding: 22px 0;
+}
+.site-header__btn-group {
+  @include flex-box;
+  column-gap: calc(50% - 76px);
+}
+.logo__img {
+  width: 76px;
+  height: 20px;
+}
+.hambrger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 16px;
+  border: none;
+  background-image: url("../../images/hamburger.svg");
+  background-color: transparent;
+}
+.cross {
+  background-image: url("../../images/cross.svg");
+}
+.site-header__show {
+  position: absolute;
+  top: 64px;
+  left: 0;
+  width: calc(100vw / 100 * 68 + 1px);
+  height: calc(100vh - 64px);
+  padding: 64px 32px 24px;
+  background-color: #333a44;
+  display: none;
+  z-index: 10;
+}
+.site-header__list {
+  @include list-unstyled;
+}
+.filter {
+  position: absolute;
+  top: 64px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - 64px);
+  background-color: rgba(0, 0, 0, 0.5019607843);
+  display: none;
+}
+.site-header__items:not(:last-child) {
+  margin-bottom: 24px;
+}
+.site-header__links {
+  font-family: "Space Mono";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25px; /* 138.889% */
+  text-decoration: none;
+  color: #e5ecf4;
+  transition: color 0.4s ease-in;
+}
+.site-header__link {
+  display: block;
+  max-width: 192px;
+  margin-top: 364px;
+  @include links;
+  padding: 14px 0;
+}
+.site-header__items:hover .site-header__links {
+  color: $link-color;
+}
+.hidden {
+  display: block;
+}
+.overflow {
+  overflow: hidden;
+}
+
+@include responsive(400px) {
+  .logo__img {
+    width: 108px;
+    height: 28px;
+  }
+}
+
+@include responsive(700px) {
+  .hambrger {
+    display: none;
+  }
+  .site-header__wrapper {
+    @include flex-box;
+    column-gap: 58px;
+  }
+  .site-header__list {
+    @include flex-box;
+    column-gap: 32px;
+  }
+  .siet-header__nav {
+    flex-grow: 2;
+  }
+  .site-header__show {
+    position: static;
+    @include flex-box;
+    justify-content: space-between;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+  }
+  .site-header__items:not(:last-child) {
+    margin-bottom: 0;
+  }
+  .site-header__links {
+    font-size: 15px;
+    color: #939caa;
+  }
+  .site-header__link {
+    margin-top: 0;
+    padding: 14px 39px;
+  }
+}

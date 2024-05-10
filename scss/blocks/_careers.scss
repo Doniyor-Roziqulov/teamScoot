@@ -1,0 +1,126 @@
+.careers__box {
+    padding-top: 72px;
+    padding-bottom: 120px;
+    background-image: url(../../images/home/icons/telemetrybg.svg);
+    background-repeat: no-repeat;
+    background-position: calc(50% + 346px) calc(50% - 272px);
+}
+
+.general {
+    padding-bottom: 120px;
+}
+
+.general__list {
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    row-gap: 16px;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.general__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f2f5f9;
+    padding: 15px;
+}
+
+.general__title {
+    color: #495567;
+    text-align: center;
+    font-family: "Space Mono";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 133.333% */
+    letter-spacing: -0.804px;
+    margin-top: 0;
+    margin-bottom: 4px;
+}
+
+.general__text {
+    color: #495567;
+    text-align: center;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px; /* 166.667% */
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.general__link {
+    display: block;
+    color: #fff;
+    background-color: #fcb72b;
+    text-align: center;
+    font-family: "Space Mono";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 25px; /* 166.667% */
+    padding: 14px 60px;
+    text-decoration-line: none;
+}
+
+.general__link:hover {
+    color: #fcb72b;
+    border: 3px solid #fcb72b;
+    background-color: transparent;
+}
+
+@media only screen and (min-width: 350px) {
+    .general__item {
+        padding: 32px;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .general__item {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 34px 48px;
+    }
+
+    .general__title {
+        text-align: left;
+    }
+
+    .general__text {
+        text-align: left;
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    .careers__box {
+        background-position: calc(50% + 492px) calc(50% - 23px);
+    }
+
+    .general__title {
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 28px; /* 116.667% */
+        letter-spacing: -1.071px;
+        margin-bottom: 8px;
+    }
+
+    .general__text {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 25px; /* 166.667% */
+    }
+
+    .general__item {
+      padding: 32px 40px;
+    }
+
+    .general {
+      padding-bottom: 160px;
+    }
+}

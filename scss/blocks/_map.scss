@@ -1,0 +1,50 @@
+@use "../mixins" as *;
+@use "../variables" as *;
+
+.map {
+  padding: 72px 0;
+}
+.map__img {
+  margin-bottom: 40px;
+}
+.map__list {
+  @include list-unstyled;
+  @include flex-box;
+  flex-direction: column;
+  gap: 16px;
+}
+.map__items {
+  width: 100%;
+  padding: 22px 0;
+  color: #495567;
+  text-align: center;
+  font-family: "Space Mono";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: -1.071px;
+  background: rgba(252, 183, 43, 0.15);
+}
+
+@include responsive(375px) {
+  .map__items {
+    width: 311px;
+    padding: 22px 100px;
+  }
+}
+@include responsive(630px) {
+  .map {
+    padding: 144px 0 64px;
+  }
+  .map__img {
+    margin-bottom: 0;
+  }
+  .map__list {
+    display: none;
+  }
+}
+@include responsive(1024px) {
+  .map {
+    padding: 120px 0;
+  }
+}
